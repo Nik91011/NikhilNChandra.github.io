@@ -1,0 +1,448 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+header, footer {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Root variables */
+:root {
+    --background-color-light: #fff;
+    --text-color-light: #000;
+    --background-color-dark: #000;
+    --text-color-dark: #fff;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark-theme {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Ensures elements are spaced out */
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.portfolio-header {
+    /* Align the portfolio link */
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-link {
+    text-decoration: none; /* This removes the underline */
+    font-weight: bold;
+    color: #007bff; /* Example color */
+    font-size: 25x; /* Adjust the size as needed */
+    /* Add any additional styling you want here */
+    font-style: italic;
+}
+
+.portfolio-link:hover {
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+    /* Or any other style changes you want on hover */
+}
+
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Consistent gap between links */
+    margin-left: auto; /* Pushes the navigation links to the right */
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: inherit;
+    /* font-weight: bold; */
+    font-size: 22px;
+}
+
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; /* Space between navigation links and toggle */
+}
+
+#theme-toggle {
+    background-color: #ddd;
+    border: none;
+    border-radius: 15px;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+
+#theme-toggle::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    z-index: 1; 
+}
+
+#icon-sun, #icon-moon {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    transition: left 0.1s, opacity 0.1s;
+    font-size: 19px;
+    z-index: 2; 
+}
+
+#icon-sun {
+    left: 1.5px; 
+    opacity: 1; 
+}
+
+#icon-moon {
+    left: 35px; 
+    opacity: 0;
+}
+
+body.dark-theme #theme-toggle {
+    background-color: #666;
+}
+
+body.dark-theme #theme-toggle::after {
+    transform: translateX(30px);
+}
+
+body.dark-theme #icon-sun {
+    opacity: 0; 
+}
+
+body.dark-theme #icon-moon {
+    right: 5px; 
+    left: auto; 
+    opacity: 1; 
+}
+
+#loading-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+#loading-animation p {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fade 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes fade {
+    0%, 80%, 100% { opacity: 0; }
+    40% { opacity: 1; }
+}
+
+
+#introduction {
+    text-align: left; /* Aligns text to the left */
+    padding: 50px;
+    margin: 40px 0;
+}
+
+#introduction h2 {
+    font-size: 60px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the color as needed */
+    margin-bottom: 30px; /* Spacing between the header and the paragraph */
+    line-height: 1.4; /* Adjusts the spacing between lines of text */
+}
+
+#introduction p {
+    font-size: 22px; /* Adjust the font size as needed */
+    color: #666; /* Adjust the color as needed */
+    line-height: 1.6; /* Adjusts the spacing between lines of text */
+}
+
+@keyframes wave-animation {
+    0%, 100% { transform: rotate(0deg); }
+    20%, 60% { transform: rotate(-10deg); }
+    40%, 80% { transform: rotate(0deg); }
+}
+
+.wave-emoji {
+    display: inline-block;
+    animation: wave-animation 1.5s ease-in-out infinite;
+}
+
+.icon-github {
+    color: #333; /* GitHub icon color */
+}
+
+.icon-linkedin {
+    color: #0e76a8; /* LinkedIn icon color */
+}
+
+.icon-email {
+    color: #c71610; /* Email icon color */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 38px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #000000;
+    /* Add hover styles if needed */
+}
+
+.contact-me-box {
+    display: block;
+    padding: 12px 22px;
+    background-color: #007bff; /* Example background color */
+    color: white; /* Text color */
+    text-align: left;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    margin: 35px; /* Center the box */
+    width: fit-content;
+}
+
+.contact-me-box:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+#contact-details h2 {
+    font-size: 67px;
+    color: #000000; /* Example link color */
+    text-decoration: none; /* Removes underline */
+}
+
+#contact-details m {
+    font-size: 22px; /* Adjust the font size as needed */
+    color: #666; /* Adjust the color as needed */
+    line-height: 1.6; /* Adjusts the spacing between lines of text */
+}
+
+#contact-details a {
+    font-size: 30px;
+    color: #000000; /* Example link color */
+    text-decoration: none; /* Removes underline */
+}
+
+#contact-details a:hover {
+    text-decoration: none; /* Adds underline on hover for visual feedback */
+}
+
+.i-github {
+    color: #333; /* GitHub icon color */
+}
+
+.i-linkedin {
+    color: #00aeff; /* LinkedIn icon color */
+}
+
+.i-email {
+    color: #c71610; /* Email icon color */
+}
+
+.contact-icons a {
+    margin: 0 10px;
+    font-size: 38px;
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #000000;
+}
+
+#contact-details {
+    position: relative; /* Allows absolute positioning within the section */
+}
+
+.animated-mail {
+    position: absolute;
+    right:15%; /* Position to the right */
+    top: 50%; /* Adjust vertically */
+    transform: translateY(-50%); /* Center vertically */
+    animation: jumping 1s ease-in-out infinite;
+}
+
+@keyframes jumping {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(-60%); } /* Adjust for desired jump height */
+}
+
+.animated-mail i {
+    font-size: 140px; /* Adjust the icon size */
+    color: #10abc7; /* Adjust the icon color */
+}
+
+#education h2{
+    font-size: 67px;
+    color: #000000; /* Example link color */
+    text-decoration: none; /* Removes underline */
+}
+
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative; /* Needed for absolute positioning of hr */
+    margin-bottom: 20px;
+}
+
+.college-icon {
+    width: 100px; /* Adjust as needed */
+    margin-right: 20px;
+}
+
+.education-text strong {
+    font-size: 28px; /* Adjust the font size for the university name */
+    color: #333; /* Adjust color if needed */
+}
+
+.education-text {
+    margin-left: 20px; /* Adjust as needed to move text further to the right */
+}
+
+.education-item hr {
+    border: 0;
+    height: 5px;
+    background-color: #ddd;
+    position: absolute; /* Positioned absolutely within education-item */
+    width: calc(100% - 950px); /* Adjust width as needed */
+    bottom: -10px; /* Position at the bottom of education-item */
+    left: 0; /* Align to the left edge of education-item */
+}
+
+.education-item {
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: all 0.8s ease-out; /* Animation effect */
+    visibility: hidden; /* Initially hidden */
+}
+
+.education-item.visible {
+    opacity: 1; /* End visible */
+    transform: translateX(0); /* End in the final position */
+    visibility: visible; /* Make it visible */
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for responsive grid */
+    gap: 20px;
+    justify-content: center; /* Center the cards if they don't fill the entire row */
+}
+
+.project-card {
+    background: #ffffff; /* Setting the background to white */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 360px; /* Adjust as needed */
+    height: 750px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%; /* Adjust the width to take the full width of the card */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block; /* Ensures the image takes its own line */
+    margin: 0 auto; /* Center the image if it's smaller than the card width */
+}
+
+.project-card h3 {
+    text-align: center; /* Center align the title */
+    font-size: 20px; /* Adjust font size as needed */
+    color: #333; /* Adjust color as needed */
+    margin: 40px 0; /* Add top and bottom margin */
+    /* Add any other styling you need for the title */
+}
+
+
+.project-card a {
+    margin-top: auto; /* Push the link to the bottom of the card */
+}
+
+.project-card p {
+    text-align: center;
+    font-size: 15px; /* Adjust as needed */
+    color: #666; /* Adjust as needed */
+    margin: 40px 0; /* Adjust as needed */
+}
+
+.project-card p strong {
+    font-size: 20px;
+    color: #333; /* Optional: different color for 'Brief Description' */
+    /* Add any other specific styles for the 'Brief Description' part */
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 15px; /* Adjust padding as needed */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 10px; /* Space below the button */
+    margin-left: auto; /* Centering the button */
+    margin-right: auto;
+    width: fit-content; /* Adjust width to content */
+}
+
+.project-card a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
