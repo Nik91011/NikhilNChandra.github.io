@@ -13,8 +13,8 @@ header, footer {
 :root {
     --background-color-light: #fff;
     --text-color-light: #000;
-    --background-color-dark: #000;
-    --text-color-dark: #fff;
+    --background-color-dark: #695353;
+    --text-color-dark: #ffffff;
 }
 
 /* Body styling */
@@ -275,15 +275,15 @@ body.dark-theme #icon-moon {
     text-decoration: none; /* Adds underline on hover for visual feedback */
 }
 
-.i-github {
-    color: #333; /* GitHub icon color */
+.icon_1-github {
+    color: #000000; /* GitHub icon color */
 }
 
-.i-linkedin {
+.icon_1-linkedin {
     color: #00aeff; /* LinkedIn icon color */
 }
 
-.i-email {
+.icon_1-email {
     color: #c71610; /* Email icon color */
 }
 
@@ -446,3 +446,54 @@ body.dark-theme #icon-moon {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
+body.dark-theme .project-card {
+    background: #695353; /* Darker background for dark mode */
+    color: #ccc; /* Lighter text color for better readability */
+    border: 2px solid #212020; /* Adjusting border color for dark mode */
+    box-shadow: 0 5px 10px rgba(255,255,255,0.1); /* Lighter shadow for dark mode */
+}
+
+
+body.dark-theme .project-card h3,
+body.dark-theme .project-card p,
+body.dark-theme .project-card p strong {
+    color: #e0e0e0; /* Ensure text remains readable in dark mode */
+}
+
+body.dark-theme .project-card a {
+    background-color: #0056b3; /* Adjust if you want a different button color in dark mode */
+    color: #fff; /* Ensure button text color contrasts well against the button background */
+}
+
+body.dark-theme .project-card a:hover {
+    background-color: #004494; /* Optionally darken the hover color for better contrast */
+}
+
+.intro-container {
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: space-between; /* Space between the text and the image */
+    padding: 20px; /* Add padding as needed */
+}
+
+.intro-text, .intro-image {
+    flex: 1; /* Each child takes up equal space */
+}
+
+.intro-image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 600px; /* Maximum size of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Add some margin to the text or image for better spacing */
+.intro-text {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.intro-image {
+    margin-left: auto;
+    width: 100%; /* Keep your responsive settings */
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+}
