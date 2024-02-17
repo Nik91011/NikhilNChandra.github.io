@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="portfolio-header">
+            <a href="https://nikhilnchandra.github.io/" class="portfolio-link" id="portfolio-link">&lt; Nikhil Naveen Chandra &gt;</a>
+        </div>
+        <nav class="header-nav">
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact-details">Contact Me</a>
+        </nav>
+        <div class="theme-toggle-container">
+            <label id="theme-toggle-label" for="theme-toggle"></label>
+            <button id="theme-toggle">
+                <div id="icon-sun">🌞</div>
+                <div id="icon-moon">🌜</div>
+            </button>
+        </div>      
+    </header>
+    
+    <!-- Loading Animation -->
+    <div id="loading-animation" style="display: none;">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <p>Nikhil Naveen Chandra</p>
+    </div>
+
+    <section id="introduction">
+       <div class="intro-container">
+            <div class="intro-text">
+
+                    <h2>Hello all, I am Nikhil<br> Naveen Chandra <span class="wave-emoji">👋</span></h2>
+                    <p> I am on a quest to merge cutting-edge technology with real-world applications.<br>
+                        Driven by the challenge of transforming complex problems into elegant solutions,<br>
+                        I am actively exploring opportunities to bring my unique blend of skills to the<br>
+                        software development field.</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/NikhilNChandra" target="_blank" title="GitHub" class="icon-github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nikhiln2/" target="_blank" title="LinkedIn" class="icon-linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:nikhiln2@buffalo.edu" title="Email" class="icon-email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            
+                        </div>
+                        <!-- Place this where you want the Contact Me box to appear -->
+                        <a href="#contact-details" class="contact-me-box">Contact Me </a> <br><br>
+            </div>
+            <div class="intro-image">
+                <img src="robo.jpg" alt="Nikhil">
+            </div>
+        </div>
+
+
+            
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <img src="University_at_Buffalo_seal.svg.png" alt="University at Buffalo" class="college-icon">
+                    <div class="education-text">
+                        <strong>University at Buffalo</strong><br><br>
+                        <span>Master of Science in Robotics Engineering</span><br><br>
+                        August 2022 - January 2024 <br><br>
+                        Coursework: 
+                        <ul>
+                            <li>Robotics I, Machine Learning</li>
+                            <li>Computer Vision, Deep Learning, Robotics Algorithms</li>
+                        </ul>
+                        
+                    </div>
+                    <hr>
+                </div>
+                <div class="education-item">
+                    <img src="MIT_Manipal_Seal_svg.png" alt="Manipal Institute of Technology" class="college-icon">
+                    <div class="education-text">
+                        <strong>Manipal Institute of Technology</strong><br><br>
+                        <span>Bachelor of Technology in Mechanical Engineering</span><br><br>
+                        July 2017 - July 2021
+                    </div>
+                </div>
+            </section>
+            
+<br><br><br>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <!-- First Project Card -->
+                    <div class="project-card">
+                        <img src="Classification.png" alt="First Project Image">
+                        <h3>Classification and Regression</h3>
+                        <p><strong> Brief Description:</strong>  Applied logistic regression and SVM techniques to classification and regression tasks, analyzing the impact of hyperparameters on performance.
+                             It highlighted the advantages of non-linear models in handling the non-linearity of the dataset</p>
+                        <a href="https://github.com/NikhilNChandra/Classifi-cation-and-Regression" target="_blank">Visit Github Repo</a>
+                    </div>
+            
+                    <!-- Second Project Card -->
+                    <div class="project-card">
+                        <img src="checkboard.png" alt="Second Project Image">
+                        <h3>Camera Calibration</h3>
+                        <p><strong>Brief Description:</strong> Employed the checkerboard method for camera calibration in computer vision, determining the 3D-to-2D point relationship by calculating
+                             the Projection matrix, covering both Intrinsic and Extrinsic parameters</p>
+                        <a href="https://github.com/NikhilNChandra/Camera-Calibration" target="_blank">Visit Github Repo</a>
+                    </div>
+            
+                    <!-- Third Project Card -->
+                    <div class="project-card">
+                        <img src="map2.png" alt="Third Project Image">
+                        <h3>RRT</h3>
+                        <p><strong> Brief Description:  </strong> The application of the Rapidly-exploring Random Tree (RRT) algorithm is showcased for pathfinding in the domain of autonomous driving.
+                             It navigates a vehicle from start to finish through a map, avoiding obstacles, by efficiently mapping collision-free paths</p>
+                        <a href="https://github.com/NikhilNChandra/RRT-Path-Finding" target="_blank">Visit Github Repo</a>
+                    </div>
+            
+                    <!-- Fourth Project Card -->
+                    <div class="project-card">
+                        <img src="Handwritten.png" alt="Fourth Project Image">
+                        <h3>Handwritten Digits and Classification</h3>
+                        <p><strong> Brief Description: </strong> Focused on using deep and convolutional neural networks to classify handwritten digits from the MNIST dataset.
+                            It examined the influence of hyperparameters on model accuracy, showcasing the differential effectiveness
+                             of network architectures in image recognition</p>
+                        <a href="https://github.com/NikhilNChandra/Handwritten-Digits-Classification" target="_blank">Visit Github Repo</a>
+                    </div>
+                </div>
+            </section>
+            
+
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Other sections like About, Portfolio, Contact -->
+    <section id="contact-details">
+        <h2>Contact Me</h2>
+        <m>Interested in collaboration or have a job opportunity? Let's connect. Your interest<br>
+            in my work is appreciated,
+        and I look forward to exploring potential opportunities<br> together.<br><br>
+        </m>
+        <a href="tel:+17168613449">+1 716-861-3449</a><br><br>
+        <a href="mailto:nikhiln2@buffalo.edu">nikhiln2@buffalo.edu</a><br><br>
+    
+        <div class="contact-icons">
+            <a href="https://github.com/NikhilNChandra" target="_blank" title="GitHub" class="icon_1-github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nikhiln2/" target="_blank" title="LinkedIn" class="icon_1-linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:nikhiln2@buffalo.edu" title="Email" class="icon_1-email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <div class="animated-mail">
+            <i class="fas fa-envelope"></i>
+        </div>
+    </section>
+
+    
+
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
